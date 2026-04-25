@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.4.2 (UNKNOWN-17d59c9; 2018-09-26T15:16:30-0700) JAXWS-RI/2.3.1 JAXWS-API/2.3.1 JAXB-RI/2.3.1 JAXB-API/2.3.1 svn-revision#unknown. --><xs:schema xmlns:tns="http://lab8/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://lab8/">
+
+<xs:element name="addNumbers" type="tns:addNumbers"/>
+
+<xs:element name="addNumbersResponse" type="tns:addNumbersResponse"/>
+
+<xs:element name="disturbSequence" type="tns:disturbSequence"/>
+
+<xs:element name="disturbSequenceResponse" type="tns:disturbSequenceResponse"/>
+
+<xs:element name="generateLogSequence" type="tns:generateLogSequence"/>
+
+<xs:element name="generateLogSequenceResponse" type="tns:generateLogSequenceResponse"/>
+
+<xs:complexType name="addNumbers">
+<xs:sequence>
+<xs:element name="a" type="xs:int"/>
+<xs:element name="b" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addNumbersResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="disturbSequence">
+<xs:sequence>
+<xs:element name="values" type="xs:double" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="stddev" type="xs:double"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="disturbSequenceResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:double" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="generateLogSequence">
+<xs:sequence>
+<xs:element name="n" type="xs:int"/>
+<xs:element name="start" type="xs:double"/>
+<xs:element name="end" type="xs:double"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="generateLogSequenceResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:double" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
